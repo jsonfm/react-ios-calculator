@@ -49,6 +49,7 @@ function App() {
   const [result, setResult] = useState("");
 
   const concat = (value: string) => {
+    if (text.startsWith("-") && value === "-") return;
     if (value != "0" && text.startsWith("0")) {
       setText(value);
       return;
